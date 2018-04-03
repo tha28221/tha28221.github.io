@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>CSCI 1100 Web Page Project</title>
+	
+	<link rel="stylesheet" href="pages.css">
+
+</head>
+<body>
+
+<div style="text-align:center">
+	<img src="League.png" alt="Overwatch League Symbol" style="width:120px;height:120px">
+</div>
+
+<h2 style="text-align:center">New York Excelsior Team Fan Page Click Tabs To Continue</h2>
+
+<div class="tab">
+	<button class="tablinks" onclick="openLeague(event, 'League')">About League</button>
+	<button class="tablinks" onclick="openLeague(event, 'NYXL')">About NYXL</button>
+	<button class="tablinks" onclick="openLeague(event, 'Roster')">Team Roster</button>
+</div>
+
+<div id="League" class="tabcontent">
+	<h3>About the Overwatch League</h3>
+	<p style="font-family:Arial">Overwatch League is the competitive e-sports scene of the popular, award-winning game Overwatch. 
+	Teams made up of 6 players who specialize in each type of game role (DPS,Flex,Tank,Support), compete against each other each week towards the stage winner prize of <b>$100,000</b> and the grand prize of <b>$1,000,000</b>.
+	Matches take place each week in an e-sports arena in the Los Angeles area.
+	<br>
+	<br>	
+	The Overwatch league is split up into 4 stages; each stage contains 5 weeks of play, with 3 matches a day (Wednesday-Saturday), culminating in a playoff match at the end of the fifth week to determine the winner of each stage. 
+	At the end of Stage 4 a grand champion will be chosen determined by the previous winnings and the outcome of the final game.
+	</p>
+</div>
+
+<div id="NYXL" class="tabcontent">
+	<h3>About New York Excelsior</h3>
+	<p style="font-family:Arial">New York Excelsior is the current top team of the Overwatch League.
+	Most of the players have been in the competitive Overwatch scene since its beginning in 2016, and have competed in both Apex and the Overwatch World Cup. 
+	Saebyeolbe and Mano have been a part of Team South Korea who competed for, and won, the Overwatch World cup in 2016 and 2017.
+	New York Excelsior were the runners up of stage 1 and the winners of stage 2. 
+	They continue into the 3rd stage in first place overall, and the hopeful winners of the League championship.
+	</p> 
+</div>
+
+<div id="Roster" class="tabcontent">
+	<h3>Team Names and Positions</h3>
+  
+	<table cellspacing="2px" cellpadding=3px>
+		<tr><th colspan=4>Team Roster</th></tr>
+		<tr><td>ID<td>Name<td>Number<td>Role</td></tr>
+		<tr><td>Saebyeolbe<td>Jong-ryeol Park<td>9<td>DPS</td></tr>
+		<tr><td>Pine<td>Do-hyeon Kim<td>21<td>DPS/Flex</td></tr>
+		<tr><td>Libero<td>Hae-seong Kim<td>10<td>DPS/Flex</td></tr>
+		<tr><td>MekO<td>Tae-hong Kim<td>11<td>Flex</td></tr>
+		<tr><td>Janus<td>Jun-hwa Song<td>1<td>Tank</td></tr>
+		<tr><td>Mano<td>Dong-gyu Kim<td>7<td>Tank</td></tr>
+		<tr><td>JJoNak<td>Seong-hyun Bang<td>44<td>Support</td></tr>
+		<tr><td>ArK<td>Yeon-Jun Hong<td>2<td>Support</td></tr>
+		
+	</table>
+</div>
+
+<div style="text-align:center">
+<br>
+	<img src="NYXL.png" alt="New York Excelsior Team Photo" style="width:1000px;height:500px">
+</div>
+
+<div style="text-align:center">
+	<a href="https://www.theringer.com/2018/1/17/16899222/esports-the-overwatch-league-debut-new-york-excelsior">Photo Credit</a>
+</div>
+
+<script type="text/javascript">
+function openLeague(evt, leagueName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(leagueName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+
+</body>
+</html>
